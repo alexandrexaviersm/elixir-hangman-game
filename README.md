@@ -1,10 +1,6 @@
 # elixir-hangman-game
 Taken from Elixir for Programmers course, by Dave Thomas.
 
-# Hangman
-
-**TODO: Add description**
-
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
