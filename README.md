@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Hangman
 
 **TODO: Add description**
@@ -19,3 +20,7 @@ Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_do
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/hangman](https://hexdocs.pm/hangman).
 
+=======
+# elixir-hangman-game
+Taken from Elixir for Programmers course, by Dave Thomas.
+>>>>>>> 18fc75a428738cd2141136bb47daed165633e082
