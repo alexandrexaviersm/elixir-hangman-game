@@ -1,9 +1,10 @@
 defmodule Hangman.Game do
-  defstruct(turns_left: 7, game_state: :initializing, letters: [], used: MapSet.new())
+  defstruct(turns_left: 7, game_state: :initializing, letters: [], word: "", used: MapSet.new())
 
   def new_game(word) do
     %Hangman.Game{
-      letters: word |> String.codepoints()
+      letters: word |> String.codepoints(),
+      word: word
     }
   end
 
@@ -26,7 +27,9 @@ defmodule Hangman.Game do
     %{
       game_state: game.game_state,
       turns_left: game.turns_left,
-      letters: game.letters |> reveal_guessed(game.used)
+      letters: game.letters |> reveal_guessed(game.used),
+      used_letters: game.used,
+      word: game.word
     }
   end
 
