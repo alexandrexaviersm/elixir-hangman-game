@@ -1,12 +1,12 @@
 defmodule TextClient.Player do
   alias TextClient.{Prompter, Summary, State, Mover}
 
-  def play(%State{tally: %{game_state: :won, word: word}}) do
-    end_with_message("You WON!", word)
+  def play(%State{game_service: %{letters: letters}, tally: %{game_state: :won}}) do
+    end_with_message("You WON!", letters)
   end
 
-  def play(%State{tally: %{game_state: :lost, word: word}}) do
-    end_with_message("Sorry, you lost...", word)
+  def play(%State{game_service: %{letters: letters}, tally: %{game_state: :lost}}) do
+    end_with_message("Sorry, you lost...", letters)
   end
 
   def play(game = %State{tally: %{game_state: :good_guess}}) do
@@ -50,7 +50,7 @@ defmodule TextClient.Player do
     continue(game)
   end
 
-  defp end_with_message(msg, word) do
-    IO.puts(["\n", msg, "The word was #{word}"])
+  defp end_with_message(msg, letters) do
+    IO.puts(["\n", msg, "The word was #{Enum.join(letters)}"])
   end
 end
