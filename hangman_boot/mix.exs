@@ -19,7 +19,7 @@ defmodule HangmanBoot.MixProject do
 
   defp deps do
     [
-      {:text_client, path: "../text_client"}
+      {:hangman, path: "../hangman"}
     ]
   end
 end
