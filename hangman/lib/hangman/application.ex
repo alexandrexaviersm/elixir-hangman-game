@@ -5,7 +5,7 @@ defmodule Hangman.Application do
     import Supervisor.Spec
 
     children = [
-      worker(Hangman.Server, [])
+      worker(Hangman.Game, [])
     ]
 
     options = [
