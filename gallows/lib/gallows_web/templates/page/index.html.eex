@@ -1,0 +1,3 @@
+<section class="phx-hero">
+  <h2><%= plural_of("egg", 666) %></h2>
+</section>
