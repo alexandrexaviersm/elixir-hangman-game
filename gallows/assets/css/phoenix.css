@@ -132,3 +132,11 @@ header nav a {
     margin: 2rem 1rem;
   }
 }
+
+.faint {
+  opacity: 0.1;
+}
+
+.dim {
+  opacity: 1;
+}
